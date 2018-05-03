@@ -3,7 +3,7 @@
 #This program includes some basic input validation
 
 import random
-#import sys
+import sys
 
 total = 0
 playAgain = True
@@ -38,11 +38,6 @@ def giveResults():
     else:
         print('You lost. Better luck next time.')
 
-def printVars():
-    print('Total = ' + str(total))
-    print('Result = ' + result)
-    print('Wager = ' + wager)
-
 def encore():
     global playAgain, wager
     encoreVar = ''
@@ -53,7 +48,7 @@ def encore():
       if encoreVar == 'N':
         playAgain = False
         print('Thanks for playing!')
-        #sys.exit
+        sys.exit
       elif encoreVar== 'Y':
         playAgain = True
         wager = ''
@@ -65,5 +60,4 @@ while playAgain == True:
     getWager()
     rollDice()
     giveResults()
-    printVars()
     encore()
